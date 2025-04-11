@@ -5,10 +5,13 @@ import { ValidationPipe } from '@nestjs/common';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  app.useGlobalPipes(new ValidationPipe);
+  app.useGlobalPipes(new ValidationPipe());
 
   app.enableCors({
-    origin: ['http://localhost:3000', 'https://task-pubsilon-frontend.vercel.app/'],
+    origin: [
+      `http://localhost:${process.env.PORT}`,
+      'https://task-pubsilon-frontend.vercel.app',
+    ],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
     credentials: true,
   });
