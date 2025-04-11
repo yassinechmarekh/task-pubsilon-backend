@@ -9,8 +9,8 @@ This is a backend authentication service built with **NestJS**, **MongoDB**, and
 1. Clone the repository:
 
    ```bash
-   git clone <your-repo-url>
-   cd <your-project-folder>
+   git clone https://github.com/yassinechmarekh/task-pubsilon.git
+   cd backend
 
    ```
 
